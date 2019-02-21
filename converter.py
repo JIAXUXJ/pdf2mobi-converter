@@ -1,7 +1,13 @@
 # User: jx
 # Date: 2019-02-20
-
+import requests
 
 if __name__ == '__main__':
-	link = input("Please input the link of html page: ")
-	
+	# inputlink = input("Please input the link of html page: ")
+	# hardcode of link:
+	inputlink = "http://python3-cookbook.readthedocs.io/zh_CN/latest/"
+	wb = requests.get(inputlink)
+	wb.encoding = "utf-8"
+	print(wb)
+
+	urls = []
