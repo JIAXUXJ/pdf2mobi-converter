@@ -2,6 +2,7 @@
 # Date: 2019-02-20
 import requests
 from bs4 import BeautifulSoup
+import pdfkit
 
 if __name__ == '__main__':
 	# inputlink = input("Please input the link of html page: ")
