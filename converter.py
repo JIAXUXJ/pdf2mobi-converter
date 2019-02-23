@@ -1,15 +1,34 @@
 # MIT License
 # Copyright (c) 2019 Jia
 
-import requests
-from bs4 import BeautifulSoup
-import pdfkit
-import tkinter as TK
+import tkinter as tk
+from tkinter import filedialog
+
 
 if __name__ == '__main__':
 	# ----------------------gui window begin---------------------- 
-	window = tk.TK()  
+	window = tk.Tk()  
 	window.title("pdf2mobi converter")
+	window.geometry("700x400")
+
+	def callback():
+		fileName = filedialog.askopenfilename()
+		print(fileName)
+	upload_b = tk.Button(window,text='Open a pdf file',command=callback)
+	upload_b.pack(fill = tk.X, padx=200, pady=10)
+
+	btn_text = tk.StringVar()
+	on_hit = False
+	def pdf2mobi():
+		global on_hit
+		if on_hit == False:
+			on_hit = True
+			btn_text.set('converting')
+	convert_b = tk.Button(window,textvariable=btn_text,command=pdf2mobi)
+	btn_text.set("convert to MOBI")
+	convert_b.pack(fill=tk.X, padx=200, pady=10)
+	
+	window.mainloop()
 	# -----------------------gui window end-----------------------
 	# # hardcode of link:
 	# inputlink = "http://python3-cookbook.readthedocs.io/zh_CN/latest/"
