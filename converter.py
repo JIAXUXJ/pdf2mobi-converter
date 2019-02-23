@@ -4,27 +4,13 @@
 import requests
 from bs4 import BeautifulSoup
 import pdfkit
-from tkinter import *
+import tkinter as TK
 
 if __name__ == '__main__':
 	# ----------------------gui window begin---------------------- 
-	def on_click():  
-		label['text'] = 'on click'  
-
-	root= Tk(className='pdf to mobi converter') 
-	label = Label(root)  
-	label['text'] = 'label text'  
-	label.pack() 
-	button = Button(root)  
-	button['text'] = 'change it'  
-	button['command'] = on_click   
-	button.pack()  
-	root.mainloop()   
-
+	window = tk.TK()  
+	window.title("pdf2mobi converter")
 	# -----------------------gui window end-----------------------
-	# source_type = input("Please select type of your source file:\n1. html link; \n2. pdf file\n")
-	# target_type = input("Please select type of target file to convert: \n1. pdf; \n2. mobi\n")
-	# # inputlink = input("Please input the link of html page: ")
 	# # hardcode of link:
 	# inputlink = "http://python3-cookbook.readthedocs.io/zh_CN/latest/"
 	# wb = requests.get(inputlink)
