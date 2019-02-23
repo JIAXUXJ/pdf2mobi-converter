@@ -1,5 +1,5 @@
 # pdf2mobi-converter
-This is a converter which convertes html/pdf file to pdf/mobi format. 
+This is a converter which convertes pdf file to mobi format. 
 
 python modules:
 
