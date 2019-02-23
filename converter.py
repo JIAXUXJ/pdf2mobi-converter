@@ -10,12 +10,19 @@ if __name__ == '__main__':
 	window = tk.Tk()  
 	window.title("pdf2mobi converter")
 	window.geometry("700x400")
+	window.configure(background="#FFFFF0")
+
+	file_var = tk.StringVar()
 
 	def callback():
 		fileName = filedialog.askopenfilename()
-		print(fileName)
-	upload_b = tk.Button(window,text='Open a pdf file',command=callback)
-	upload_b.pack(fill = tk.X, padx=200, pady=10)
+		file_var.set("File to convert: "+fileName)
+	upload_b = tk.Button(window,text='Open a pdf file', command=callback)
+	upload_b.config(highlightbackground = "#FFFFF0")
+	upload_b.pack(fill = tk.X, padx=200)
+
+	file_N = tk.Label(window, textvariable = file_var, bg='#FFFFF0', fg="black")
+	file_N.pack(pady=10)
 
 	btn_text = tk.StringVar()
 	on_hit = False
@@ -27,7 +34,7 @@ if __name__ == '__main__':
 	convert_b = tk.Button(window,textvariable=btn_text,command=pdf2mobi)
 	btn_text.set("convert to MOBI")
 	convert_b.pack(fill=tk.X, padx=200, pady=10)
-	
+
 	window.mainloop()
 	# -----------------------gui window end-----------------------
 	# # hardcode of link:
