@@ -9,4 +9,6 @@ beautiful soup - python library for pulling data out of HTML files.
 
 pdfkit - Wkhtmltopdf python wrapper, convert html to pdf using the webkit rendering engine and qt.
 
+tkinter - (“Tk interface”) the standard Python interface to the Tk GUI toolkit.
+
 -----------------------------------------------------------------------------------------------------------
